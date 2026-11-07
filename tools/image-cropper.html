@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Cropper — Free Online Crop Tool | PixelTools</title>
+<meta name="description" content="Free online image cropper with drag-to-crop, fixed ratios, rotation, and flip. Crop JPG, PNG, and WebP instantly. 100% client-side, no uploads.">
+<meta name="keywords" content="image cropper, crop photo, crop tool, 1:1 crop, 4:3 crop, 16:9 crop, resize photo, flip image, rotate image">
+<link rel="canonical" href="https://kerryjoy12/image-tools-website/tools/image-cropper.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Cropper — Free Online Crop Tool">
+<meta property="og:description" content="Drag-to-crop, fixed ratios, rotation, and flip. A fast, private online image cropper. 100% client-side, no uploads.">
+<meta property="og:image" content="https://kerryjoy12/image-tools-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Cropper — Free Online Crop Tool">
+<meta name="twitter:description" content="Drag-to-crop, fixed ratios, rotation, and flip. A fast, private online image cropper. 100% client-side, no uploads.">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="/assets/css/pixeltools.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+
+<noscript><link rel="stylesheet" href="/assets/css/pixeltools.css"></noscript>
+<style>
+  .cropper-wrap { position:relative; }
+  .cropper-wrap canvas { max-width:none; }
+  .cropper-modal { background:rgba(0,0,0,0.03); }
+  #crop-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:16px; }
+  .ratio-btns { display:flex; gap:8px; margin-left:auto; }
+  .ratio-btns button { padding:6px 12px; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="brand" aria-label="PixelTools home"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#pgrad)"/><rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/><circle cx="10" cy="10" r="2.4" fill="white"/><circle cx="22" cy="10" r="2.4" fill="white" opacity="0.7"/><circle cx="10" cy="22" r="2.4" fill="white" opacity="0.5"/><circle cx="22" cy="22" r="2.4" fill="white" opacity="0.3"/><defs><linearGradient id="pgrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs></svg><span>PixelTools</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="btn btn-outline btn-sm header-spacer" id="theme-toggle" aria-label="Toggle light/dark mode" title="Theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <ul aria-label="Primary">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown"><button class="dropdown-btn" aria-expanded="false" aria-haspopup="true">Tools ▾</button><div class="dropdown-menu" role="menu"><h4 style="margin:0 0 var(--space-sm)">Image Tools</h4><a href="/tools/image-compressor.html" role="menuitem">Image Compressor</a><a href="/tools/image-resizer.html" role="menuitem">Image Resizer</a><a href="/tools/jpg-to-png.html" role="menuitem">JPG to PNG</a><a href="/tools/webp-converter.html" role="menuitem">WebP Converter</a><a href="/tools/image-cropper.html" role="menuitem">Image Cropper</a><h4 style="margin:0 0 var(--space-sm)">Resources</h4><a href="/blog/" role="menuitem">Blog</a><a href="/about.html" role="menuitem">About</a></div></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="main" class="container tool-layout">
+  <div class="tool-main">
+    <h1>Image Cropper</h1>
+    <p class="tool-meta"><span class="badge" style="background:#2563eb;color:#fff;border-radius:var(--radius-sm);padding:var(--space-xs) var(--space-md);font-size:0.8rem;font-weight:700">100% Client-Side</span> Drag-to-crop with fixed ratios, rotation, and flip. A fast, private online image cropper. No files ever leave your device.</p>
+
+    <p>Cropping is where the design of an image is decided. A square crop makes a perfect profile picture, a 16:9 crop gives you a clean banner, and a 4:3 crop might be exactly what a portfolio or a school project needs. PixelTools Image Cropper gives you professional crop controls in a browser that runs entirely on your own device.</p>
+
+    <p>Drag any corner or edge of the crop box to select the area you want to keep. Toggle the <strong>fixed ratio</strong> presets to snap the crop to a specific relationship, rotate the image to correct a tilted horizon, and flip it horizontally or vertically when you need a mirror orientation. The result preview and the download button update in real time, and the original file is never modified.</p>
+
+    <h2>How to Crop an Image</h2>
+    <ol>
+      <li><strong>Upload a file.</strong> Drag &amp; drop a JPG, PNG, or WebP onto the upload zone, click to browse, or paste from your clipboard.</li>
+      <li><strong>Draw the crop box.</strong> Click and drag anywhere on the image to open a draggable selection rectangle. Fine-tune the edges by dragging the handles.</li>
+      <li><strong>Choose a ratio.</strong> Pick 1:1 for square thumbnails, 4:3 for classic framing, 16:9 for banners, or free mode to draw any shape.</li>
+      <li><strong>Rotate or flip.</strong> Use the controls to tilt the image, flip it horizontally or vertically, or reset to the original orientation.</li>
+      <li><strong>Download.</strong> The cropped result is ready in one click. It is cropped to exactly the dimensions of the crop box, with no extra whitespace.</li>
+    </ol>
+
+    <h2>How to Choose the Right Ratio</h2>
+    <ul>
+      <li><strong>1:1 (square)</strong> — Instagram posts, profile pictures, app icons. A compact, equally balanced shape that works on every platform.</li>
+      <li><strong>4:3</strong> — Classic photographs, document headers, email banners. Slightly taller than a square, making it a good compromise between landscape and portraiture.</li>
+<li><strong>16:9</strong> — YouTube thumbnails, site banners, slideshows. A modern landscape canvas that fills a wide display without cropping the sides.</li>
+      <li><strong>Free</strong> — Handy when you simply want to trim away excess background without imposing a strict shape.</li>
+    </ul>
+
+    <h2>Tips for Better Crops</h2>
+    <ul>
+      <li><strong>Zoom before you crop.</strong> The crop handles become small on low-resolution images. Zoom in on a detail, then crop precisely around the subject.</li>
+      <li><strong>Set the composition before resizing.</strong> Crop first, then resize down. If you resize a too-tight crop down to a different size, you will only lose detail.</li>
+      <li><strong>Keep the subject centred in the rule of thirds.</strong> Many alignment guides in cropping tools follow this principle. Place your subject near an intersection rather than dead centre for a more dynamic portrait.</li>
+      <li><strong>Watch the rotation guide.</strong> When correcting a tilted horizon, use the rotation slider and watch the building edges line up.</li>
+    </ul>
+
+    <h2>Use Cases</h2>
+    <p>Turning a screenshot into a clean square for an avatar, trimming banners and headers for social media, removing unwanted people or objects from the edges of a photo, correcting the orientation of a rotated photo, and creating a landscape image from a portrait frame.</p>
+
+    <div class="ad-slot" aria-label="Advertisement — inactive" aria-hidden="true"><!-- REPLACE ca-pub-XXXXXXXXXXXXXXXX --><!-- <iframe src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></iframe><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> --></div>
+
+    <h2 style="margin-top:var(--space-2xl)">Frequently Asked Questions</h2>
+    <div class="faq-list" style="max-width:860px;margin:0 auto">
+      <div class="faq-item"><div class="faq-q"><p>Does the cropper keep the original dimensions?</p><span class="icon">✓</span></div><p class="faq-a">The original file is never changed. The tool creates a new image from the cropped region, and the download is a separate file. The original remains on your device untouched.</p></div>
+      <div class="faq-item"><div class="faq-q"><p>How do I crop a specific ratio?</p><span class="icon">✓</span></div><p class="faq-a">Select <strong>1:1</strong> for square, <strong>4:3</strong> for classic, <strong>16:9</strong> for landscape, or <strong>Free</strong> to draw any shape. The crop box snaps to that ratio as you drag.</p></div>
+      <div class="faq-item"><div class="faq-q"><p>Can I rotate or flip an image before cropping?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Use the rotation slider for fine adjustments or 90-degree steps, and the flip buttons for horizontal and vertical mirroring. These work on the full image before the crop is applied.</p></div>
+      <div class="faq-item"><div class="faq-q"><p>Is the cropped image high resolution?</p><span class="icon">✓</span></div><p class="faq-a">The output keeps the full resolution of the source image, minus the removed border. If the original is 4000&times;3000, a small 4:3 crop still leaves you with a 4000&times;3000 file.</p></div>
+      <div class="faq-item"><div class="faq-q"><p>Can I crop a batch of images with the same ratio?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Upload multiple images and choose a ratio; each one is cropped individually and downloaded as a ZIP archive.</p></div>
+    </div>
+  </div>
+
+  <aside class="tool-sidebar" aria-label="Related information">
+    <div class="card">
+      <h3 style="font-size:1.1rem;margin:0 0 var(--space-sm)">Before You Crop</h3>
+      <ul style="margin:0;padding-left:var(--space-lg)">
+        <li><b>Zoom first:</b> View the crop area at 100% so you can place the handles precisely.</li>
+        <li><b>Check the compass:</b> Use the rotation tool before cropping to avoid re-cropping after a correction.</li>
+        <li><b>Keep the original:</b> Always keep a backup copy of the un-cropped image in case you need a different framing later.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:1.1rem;margin:0 0 var(--space-sm)">More Tools</h3>
+      <ul style="margin:0;padding-left:var(--space-lg)">
+        <li><a href="/tools/image-compressor.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">Image Compressor</a></li>
+        <li><a href="/tools/image-resizer.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">Image Resizer</a></li>
+        <li><a href="/tools/jpg-to-png.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">JPG to PNG</a></li>
+        <li><a href="/tools/webp-converter.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">WebP Converter</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>PixelTools</h4><p style="margin:0;max-width:320px">Free, privacy-first online image tools that run entirely in your browser. Your photos belong to you.</p></div>
+      <div class="footer-col"><h4>Tools</h4><ul><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/image-resizer.html">Image Resizer</a></li><li><a href="/tools/jpg-to-png.html">JPG to PNG</a></li><li><a href="/tools/webp-converter.html">WebP Converter</a></li><li><a href="/tools/image-cropper.html">Image Cropper</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/cookie-policy.html">Cookie Policy</a></li><li><a href="/terms-of-service.html">Terms of Service</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 PixelTools. Made with <span>&hearts;</span> for a private web.</p><p>Image processing is done locally in your browser. No images are uploaded to our servers.</p></div>
+  </div>
+</footer>
+
+<button id="scroll-top" class="btn btn-outline btn-sm" aria-label="Scroll back to top" style="position:fixed;bottom:var(--space-lg);left:var(--space-lg);display:none;z-index:999"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>Top</button>
+<div id="toast-host" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+
+
+
+
+
+<script src="/assets/js/shared.js" defer></script>
+<script src="/assets/js/cookies.js" defer></script>
+<script src="/assets/js/tools/cropper.js" defer></script>
+</body>
+</html>

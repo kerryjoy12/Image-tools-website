@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Image Compression? Lossy vs Lossless Explained — PixelTools Blog</title>
+<meta name="description" content="Lossy or lossless? The distinction sounds technical, but it determines whether a compression tool destroys your detail or keeps it. A plain-language guide.">
+<meta name="keywords" content="lossy vs lossless, image compression, JPEG compression, PNG compression, file size quality">
+<link rel="canonical" href="https://kerryjoy12/image-tools-website/blog/image-compression-lossy-vs-lossless.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Is Image Compression? Lossy vs Lossless Explained">
+<meta property="og:description" content="Lossy or lossless? A plain-language guide to the difference, with practical examples.">
+<meta property="og:image" content="https://kerryjoy12/image-tools-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is Image Compression? Lossy vs Lossless Explained">
+<meta name="twitter:description" content="Lossy or lossless? A plain-language guide to the difference, with practical examples.">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="/assets/css/pixeltools.css">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Article", "headline": "What Is Image Compression? Lossy vs Lossless Explained", "description": "Lossy or lossless? A plain-language guide to the difference, with practical examples.", "author": { "@type": "Organization", "name": "PixelTools" }, "publisher": { "@type": "Organization", "name": "PixelTools", "logo": { "@type": "ImageObject", "url": "https://kerryjoy12/image-tools-website/assets/img/favicon.svg" } }, "datePublished": "2026-05-01", "mainEntityOfPage": { "@type": "WebPage", "url": "https://kerryjoy12/image-tools-website/blog/image-compression-lossy-vs-lossless.html" }, "image": { "@type": "ImageObject", "url": "https://kerryjoy12/image-tools-website/assets/img/og-image.png" } }
+</script>
+<noscript><link rel="stylesheet" href="/assets/css/pixeltools.css"></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="brand" aria-label="PixelTools home"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#pgrad)"/><rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/><circle cx="10" cy="10" r="2.4" fill="white"/><circle cx="22" cy="10" r="2.4" fill="white" opacity="0.7"/><circle cx="10" cy="22" r="2.4" fill="white" opacity="0.5"/><circle cx="22" cy="22" r="2.4" fill="white" opacity="0.3"/><defs><linearGradient id="pgrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs></svg><span>PixelTools</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="btn btn-outline btn-sm header-spacer" id="theme-toggle" aria-label="Toggle light/dark mode" title="Theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <ul aria-label="Primary">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown"><button class="dropdown-btn" aria-expanded="false" aria-haspopup="true">Tools ▾</button><div class="dropdown-menu" role="menu"><h4 style="margin:0 0 var(--space-sm)">Image Tools</h4><a href="/tools/image-compressor.html" role="menuitem">Image Compressor</a><a href="/tools/image-resizer.html" role="menuitem">Image Resizer</a><a href="/tools/jpg-to-png.html" role="menuitem">JPG to PNG</a><a href="/tools/webp-converter.html" role="menuitem">WebP Converter</a><a href="/tools/image-cropper.html" role="menuitem">Image Cropper</a><h4 style="margin:0 0 var(--space-sm)">Resources</h4><a href="/blog/" role="menuitem">Blog</a><a href="/about.html" role="menuitem">About</a></div></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="main" class="container" style="padding-top:var(--space-2xl)">
+  <nav style="font-size:0.9rem;color:var(--color-text-muted);margin-bottom:var(--space-lg)" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Lossy vs Lossless
+  </nav>
+
+  <article class="legal-inner">
+    <h1 style="margin-bottom:var(--space-md)">What Is Image Compression? Lossy vs Lossless Explained</h1>
+    <p style="color:var(--color-text-muted)">Lossy or lossless? The distinction sounds technical, but it determines whether a compression tool destroys your detail or keeps it. This article explains both approaches in plain language, compares them side by side, and gives you a rule of thumb for when each one is the right choice.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">What Compression Actually Does</h2>
+    <p>A digital image is a grid of pixels, each carrying its own colour value. That grid is the complete description of the picture. The "size" of the file is simply the amount of data required to describe every pixel. If you have a 1000 &times; 1000 photograph, you have roughly one million pixels, and each one needs somewhere between a few bytes and a few dozen bytes of information. That is the uncompressed reality of an image file, and it is what "raw" means in photography: a file that describes every pixel without any attempt to save space.</p>
+    <p>Compression is the art of describing the same picture with less data. You do this by finding patterns, smoothing areas that change gradually, and discarding information that is unlikely to be noticed. The question is what kind of information you are allowed to discard. That is where lossy and lossless split.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">Lossless Compression: The Exact Copy</h2>
+    <p>Lossless compression reduces file size without changing a single pixel. Every colour value that goes into the compressor comes out of the decompressor exactly the same. The original file is preserved at a fixed, mathematically guaranteed size. You can apply lossless compression as many times as you like, and the pixel data will always remain identical.</p>
+    <p>The analogy that helps most is a zip file. A zip file does not change the contents of the files inside; it merely stores them in a more compact way. PNG and WebP in lossless mode work the same way: they find redundancy in the pixel data and store it more efficiently. If you open a lossless PNG and a lossless WebP of the same image, you will see the same colours and shapes, just stored with different amounts of efficiency.</p>
+    <p>Lossless compression runs up against a hard ceiling. A photograph with smooth gradients and millions of subtle colour variations does not contain much redundancy, so there is only so much you can compress it. A high-resolution photograph is likely to compress to a PNG that is three to five times larger than the same photo in a lossy format. This is a limitation of the image content, not the tool.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">Lossy Compression: The Deliberate Trade-Off</h2>
+    <p>Lossy compression deliberately discards information in order to achieve a much larger reduction in file size. JPEG is the most familiar example. The encoder identifies the details that matter least to the human visual system and removes them. The result is a smaller file that still looks like the original when viewed at a normal distance.</p>    <p>The cost, of course, is that the discarded data is gone forever. This is not a reversible process. A JPEG that has been saved and re-saved repeatedly will accumulate more loss each time, and you will eventually see blocks, fringing, and a sandy texture. This is why professional photographers never re-save a JPEG; they keep an archive copy in a lossless or raw format and only ever save a working JPEG once.</p>        <p>The amount of loss is controlled by the <strong>quality setting</strong>. A quality setting of 95 or 100 on a JPEG produces a barely perceptible reduction in size. Drop the quality to 70–80, and you will save a great deal of space with a difference that is very hard to see on screen. This is the trade-off in action: in a double-digit percentage point reduction of file size, you lose so little that the viewer will never notice.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">When to Choose Which</h2>
+    <p>The decision comes down to three practical questions.</p>
+    <ul>
+      <li><strong>Do you need the original preserved forever?</strong> Use a lossless format. If you are archiving a rare set of photographs, the archive should be lossless (or raw) so that no information is ever lost.</li>
+      <li><strong>Do you need the image to stay sharp and clean?</strong> Use a lossless format. Text, line art, logos, and illustrations benefit from lossless compression because lossy compression softens edges and creates visible artefacts around fine detail.</li>
+      <li><strong>Do you need the smallest possible file for the web?</strong> Use a high-quality lossy format. A JPEG or WebP at quality 80–85 is the standard for photographs on the web, because the visual difference is negligible and the file size savings are substantial.</li>
+    </ul>
+
+    <h2 style="margin-top:var(--space-2xl)">The JPEG Ringing Effect: A Concrete Example</h2>
+    <p>The clearest demonstration of lossy compression is what happens to a small, high-contrast detail. Take a sharp black line on a white background. A lossless file preserves that black line exactly. A JPEG at 95% quality will still show a clean black line. At 60% quality, the edges of the line will begin to flicker slightly: a few light pixels will appear inside the black line, and a few dark pixels will appear in the white background. These are the pixels that the encoder decided were not "important enough" to keep. The line is still visible, but it is no longer perfectly clean.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">Practical Examples from Real Projects</h2>
+    <p>A photographer needs to keep the original raw file, and a separate JPEG for web use. The raw archive is lossless and preserves every detail; the web JPEG is highly compressed but is created from the original, never re-saved, so the accumulated damage never happens. A website designer receives PNG screenshots from a developer with text and transparency. They convert to WebP for the site, which preserves the text and transparency while shrinking the file size. A newsletter designer receives a photograph with a transparent background. They convert the PNG to JPG and fill the transparent areas with white, because the email client cannot handle transparency. Each of these decisions is an instance of a simple rule: pick the format that preserves the structure that matters, and compress for the environment that matters.</p>
+
+    <h2 style="margin-top:var(--space-2xl)">Summary</h2>
+    <p>Lossless and lossy are not competing values; they are different tools for different jobs. Use lossless when the information must be preserved exactly: archives, graphics with text, transparency. Use lossy when the file has to be small and the detail is less important: photographs for the web. The PixelTools Image Compressor lets you walk the whole slope between the two, with a live quality slider and instant feedback, so you can find the point where the file size drops and your photos still look exactly as they did.</p>
+  </article>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>PixelTools</h4><p style="margin:0;max-width:320px">Free, privacy-first online image tools that run entirely in your browser. Your photos belong to you.</p></div>
+      <div class="footer-col"><h4>Tools</h4><ul><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/image-resizer.html">Image Resizer</a></li><li><a href="/tools/jpg-to-png.html">JPG to PNG</a></li><li><a href="/tools/webp-converter.html">WebP Converter</a></li><li><a href="/tools/image-cropper.html">Image Cropper</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/cookie-policy.html">Cookie Policy</a></li><li><a href="/terms-of-service.html">Terms of Service</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 PixelTools. Made with <span>&hearts;</span> for a private web.</p><p>Image processing is done locally in your browser. No images are uploaded to our servers.</p></div>
+  </div>
+</footer>
+
+<button id="scroll-top" class="btn btn-outline btn-sm" aria-label="Scroll back to top" style="position:fixed;bottom:var(--space-lg);left:var(--space-lg);display:none;z-index:999"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>Top</button>
+
+<script src="/assets/js/shared.js" defer></script>
+<script src="/assets/js/cookies.js" defer></script>
+</body>
+</html>

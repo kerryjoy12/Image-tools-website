@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kerryjoy12/image-tools-website/sitemap.xml
+
+# Google AdSense placeholder — replace with your approved publisher ID before submitting.
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

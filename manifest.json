@@ -1,0 +1,17 @@
+{
+  "name": "PixelTools — Free Online Image Tools",
+  "short_name": "PixelTools",
+  "description": "Free online image tools that run entirely in your browser. Compress, resize, convert, and crop images with 100% privacy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

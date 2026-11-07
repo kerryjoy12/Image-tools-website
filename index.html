@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelTools — 5 Free Online Image Tools. Compress, Resize, Convert, Crop</title>
+<meta name="description" content="Free online image tools: compress, resize, convert JPG/PNG/WebP, and crop images entirely in your browser. No uploads, no signup, 100% private.">
+<meta name="keywords" content="image compressor, resize photo, JPG to PNG, WebP converter, image cropper, online image tools">
+<link rel="canonical" href="https://kerryjoy12/image-tools-website/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PixelTools — 5 Free Online Image Tools">
+<meta property="og:description" content="Compress, resize, convert, and crop images in your browser. No uploads, no signup, 100% private.">
+<meta property="og:image" content="https://kerryjoy12/image-tools-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PixelTools — 5 Free Online Image Tools">
+<meta name="twitter:description" content="Compress, resize, convert, and crop images in your browser. No uploads, no signup, 100% private.">
+<meta name="twitter:image" content="https://kerryjoy12/image-tools-website/assets/img/og-image.png">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="/assets/css/pixeltools.css">
+
+<noscript><link rel="stylesheet" href="/assets/css/pixeltools.css"></noscript>
+<style>
+/* Non-blocking: just theme defaults, CSS file may override */
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== SHARED HEADER ===== -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="brand" aria-label="PixelTools home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="url(#pgrad)"/>
+        <rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/>
+        <circle cx="10" cy="10" r="2.4" fill="white"/>
+        <circle cx="22" cy="10" r="2.4" fill="white" opacity="0.7"/>
+        <circle cx="10" cy="22" r="2.4" fill="white" opacity="0.5"/>
+        <circle cx="22" cy="22" r="2.4" fill="white" opacity="0.3"/>
+        <defs><linearGradient id="pgrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+      </svg>
+      <span>PixelTools</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <button class="btn btn-outline btn-sm header-spacer" id="theme-toggle" aria-label="Toggle light/dark mode" title="Theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <ul aria-label="Primary">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown"><button class="dropdown-btn" aria-expanded="false" aria-haspopup="true">Tools ▾</button><div class="dropdown-menu" role="menu"><h4 style="margin:0 0 var(--space-sm)">Image Tools</h4><a href="/tools/image-compressor.html" role="menuitem">Image Compressor</a><a href="/tools/image-resizer.html" role="menuitem">Image Resizer</a><a href="/tools/jpg-to-png.html" role="menuitem">JPG to PNG</a><a href="/tools/webp-converter.html" role="menuitem">WebP Converter</a><a href="/tools/image-cropper.html" role="menuitem">Image Cropper</a><h4 style="margin:0 0 var(--space-sm)">Resources</h4><a href="/blog/" role="menuitem">Blog</a><a href="/about.html" role="menuitem">About</a></div></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Introduction">
+  <div class="container">
+    <span class="hero-badge">5 Free Tools — Runs 100% in Your Browser</span>
+    <h1>Compress, resize, convert, and crop your images without ever uploading them.</h1>
+    <p>Every PixelTools tool processes your photos locally using the Canvas API. Your files never leave your device, so your photos stay private — forever.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="/tools/image-compressor.html">Start Compressing</a>
+      <a class="btn btn-outline btn-lg" href="/blog/">Read the Blog</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS GRID ===== -->
+<section class="module" aria-label="Available tools">
+  <div class="container">
+    <div class="section-head">
+      <h2>All Free Image Tools</h2>
+      <p>Five fast, privacy-first tools. Use any of them in your browser — no account, no uploads, no watermark.</p>
+    </div>
+    <div class="grid tool-grid">
+      <a class="card" href="/tools/image-compressor.html">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <h3>Image Compressor</h3>
+        <p>Upload JPG, PNG, or WebP and shrink the file size with a live quality slider — no quality loss you can notice.</p>
+        <span class="card-link">Open tool &rarr;</span>
+      </a>
+      <a class="card" href="/tools/image-resizer.html">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3>Image Resizer</h3>
+        <p>Resize by pixels or percentage, lock the aspect ratio, and pick from social media presets in one click.</p>
+        <span class="card-link">Open tool &rarr;</span>
+      </a>
+      <a class="card" href="/tools/jpg-to-png.html">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <h3>JPG to PNG</h3>
+        <p>Convert JPG images to PNG to get full alpha transparency and lossless quality. Also works in reverse — PNG to JPG.</p>
+        <span class="card-link">Open tool &rarr;</span>
+      </a>
+      <a class="card" href="/tools/webp-converter.html">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><polygon points="13 7 11 12 17 12 15 17 13 17 13 7"/><line x1="13" y1="11" x2="15" y2="11"/><line x1="11" y1="11" x2="13" y2="11"/></svg></div>
+        <h3>WebP Converter</h3>
+        <p>Convert to and from WebP with a quality control slider. WebP is the modern, highly efficient image format.</p>
+        <span class="card-link">Open tool &rarr;</span>
+      </a>
+      <a class="card" href="/tools/image-cropper.html">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <h3>Image Cropper</h3>
+        <p>Drag-to-crop with fixed ratios, free rotation, and flip. Perfect for thumbnails and profile pictures.</p>
+        <span class="card-link">Open tool &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="module" style="background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)" aria-label="How it works">
+  <div class="container">
+    <div class="section-head">
+      <h2>How It Works</h2>
+      <p>Three simple steps to get a better image — right in your browser.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div><h3>Upload your image</h3><p>Drop a JPG, PNG, or WebP file anywhere on the page, click to browse, or paste it straight from your clipboard.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div><h3>Adjust the settings</h3><p>Use sliders, presets, or keep the defaults. Your image is processed instantly in your browser with no server wait.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div><h3>Download the result</h3><p>Save your optimised image instantly. The original is never touched and is deleted from memory right after processing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="module" aria-label="Why choose us">
+  <div class="container">
+    <div class="section-head">
+      <h2>Why Choose PixelTools</h2>
+      <p>A privacy-first approach to online image editing that actually respects your photos.</p>
+    </div>
+    <div class="grid features">
+      <div class="feature">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h3>Fully Private</h3><p>Every image is processed in your browser with the Canvas API. Files are never uploaded, stored, or shared.</p></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+        <div><h3>100% Free</h3><p>No subscriptions, no credit cards, no trials. Every tool is free forever with no hidden limits.</p></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+        <div><h3>No Signup</h3><p>Just open a page and start working. No registration, no email, no personal data requested.</p></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div><h3>Fast &amp; Lightweight</h3><p>Pure client-side processing with no server response time. No plugins, no downloads, no installs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="module" style="background:var(--color-surface);border-top:1px solid var(--color-border)" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about using PixelTools. Can't find an answer? <a href="/contact.html">Contact us</a>.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><p>Are my images really processed on my device?</p><span class="icon">✓</span></div>
+        <p class="faq-a">Yes. Every PixelTools tool runs 100% in your browser using the Canvas API and FileReader. Your images are never sent to a server — they exist only in your device's memory while you work.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><p>Do I need to create an account to use these tools?</p><span class="icon">✓</span></div>
+        <p class="faq-a">No. There is no signup at all. Just open a tool page and you can upload, process, and download images immediately.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><p>Will compression reduce the quality of my photos?</p><span class="icon">✓</span></div>
+        <p class="faq-a">It can, but only if you want it to. The compressor includes a quality slider so you can see the file-size reduction live before choosing a setting. For most photos, a modest reduction like 80–85% quality is invisible to the eye.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><p>What image formats are supported?</p><span class="icon">✓</span></div>
+        <p class="faq-a">We support JPG, PNG, and WebP. PNG files support transparency, and WebP conversions follow the standard browser support (Chrome, Edge, Safari 14+, Firefox 65+).</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><p>Can I use these tools on my phone or tablet?</p><span class="icon">✓</span></div>
+        <p class="faq-a">Absolutely. All tools are fully responsive and tested on mobile. The gesture controls on the cropper work with touch, and the upload zone accepts files from the photo library.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AD SLOT (COMMENTED OUT — inactive until AdSense approval) ===== -->
+<div class="ad-slot" aria-label="Advertisement — inactive" aria-hidden="true"><!-- REPLACE ca-pub-XXXXXXXXXXXXXXXX --><!-- <iframe src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></iframe><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> --></div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>PixelTools</h4>
+        <p style="margin:0;max-width:320px">Free, privacy-first online image tools that run entirely in your browser. Your photos belong to you.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/tools/image-compressor.html">Image Compressor</a></li>
+          <li><a href="/tools/image-resizer.html">Image Resizer</a></li>
+          <li><a href="/tools/jpg-to-png.html">JPG to PNG Converter</a></li>
+          <li><a href="/tools/webp-converter.html">WebP Converter</a></li>
+          <li><a href="/tools/image-cropper.html">Image Cropper</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PixelTools. Made with <span>&hearts;</span> for a private web.</p>
+      <p>Image processing is done locally in your browser. No images are uploaded to our servers.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll-to-top button -->
+<button id="scroll-top" class="btn btn-outline btn-sm" aria-label="Scroll back to top" style="position:fixed;bottom:var(--space-lg);left:var(--space-lg);display:none;z-index:999">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  Top
+</button>
+
+<!-- ===== TOAST HOST ===== -->
+<div id="toast-host" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+<!-- ===== SHARED JS ===== -->
+<script src="/assets/js/shared.js" defer></script>
+<script src="/assets/js/cookies.js" defer></script>
+</body>
+</html>
