@@ -80,31 +80,6 @@
     });
   });
 
-  // ---- Theme ----
-  function applyTheme(toggle) {
-    const saved = localStorage.getItem("pt-theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const theme = toggle
-      ? (toggle === "light" ? "light" : "dark")
-      : (saved || (prefersDark ? "dark" : "light"));
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    root.style.colorScheme = theme;
-    document
-      .querySelector('input[name="theme-toggle"]')
-      ?.setAttribute("value", theme);
-    localStorage.setItem("pt-theme", theme);
-  }
-
-  const themeToggleBtn = document.getElementById("theme-toggle");
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const curr = document.documentElement.classList.contains("dark") ? "dark" : "light";
-      applyTheme(curr === "light" ? "dark" : "light");
-    });
-  }
-  applyTheme();
-
   // ---- Cookie consent ----
   const banner = document.getElementById("cookie-consent");
   const consentBtn = document.getElementById("consent-accept");
