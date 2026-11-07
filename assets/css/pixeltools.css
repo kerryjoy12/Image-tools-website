@@ -160,12 +160,15 @@ sup { font-size: 0.7em; }
   padding: 0;
 }
 .nav-links a {
+  display: inline-block;
   padding: var(--space-sm) var(--space-sm);
   border-radius: var(--radius-sm);
   color: var(--color-text);
   font-weight: 500;
   font-size: 0.95rem;
   position: relative;
+  cursor: pointer;
+  text-decoration: none;
 }
 .nav-links a::after {
   content: "";
@@ -191,51 +194,44 @@ sup { font-size: 0.7em; }
 }
 .nav-actions { display: flex; align-items: center; gap: var(--space-sm); }
 
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    width: 100%;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: calc(var(--space-sm) / 2) var(--space-sm);
+  }
+}
+
+/*
+ * NOTE: The nav-toggle toggle is controlled by JS in shared.js.
+ * The JS checks for "theme-toggle" button and theme-related logic.
+ * Since we removed the theme toggle, the nav-toggle toggle logic
+ * also needs to be handled. We'll add a simple toggle in shared.js.
+ */
+
+
+
 /* ---- Dropdown (Tools) ---- */
-.dropdown {
-  position: relative;
-}
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  min-width: 220px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-md);
-  display: none;
-  z-index: 90;
-}
-.dropdown.open .dropdown-menu {
-  display: block;
-}
-.dropdown-menu h4 {
-  margin: 0 0 var(--space-sm);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-muted);
-}
-.dropdown-menu a,
-.dropdown-menu button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: var(--space-sm) 0;
-  border: 0;
-  background: transparent;
-  font-size: 0.95rem;
-  color: var(--color-text);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-.dropdown-menu a:hover,
-.dropdown-menu button:hover {
-  background: var(--color-surface-2);
-  color: var(--color-primary);
-}
+
+
+
+
+
 
 /* ---- Buttons ---- */
 .btn {

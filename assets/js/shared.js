@@ -1,7 +1,7 @@
 /* ============================================================
    PIXELTOLS — SHARED JAVASCRIPT
    Loaded on every page. Handles:
-   - Header nav toggle + dropdowns
+   - Header nav toggle
    - Theme preference (system / light / dark)
    - Cookie consent banner
    - Toast notifications
@@ -64,21 +64,6 @@
     });
   });
 
-  // ---- Dropdown open/close ----
-  document.querySelectorAll(".dropdown").forEach((drop) => {
-    const btn = drop.querySelector(".dropdown-btn");
-    if (!btn) return;
-    btn.addEventListener("click", () => {
-      drop.classList.toggle("open");
-      btn.setAttribute("aria-expanded", drop.classList.contains("open"));
-    });
-    document.addEventListener("click", (e) => {
-      if (!drop.contains(e.target)) drop.classList.remove("open");
-    });
-    drop.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") drop.classList.remove("open");
-    });
-  });
 
   // ---- Cookie consent ----
   const banner = document.getElementById("cookie-consent");
