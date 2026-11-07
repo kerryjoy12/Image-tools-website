@@ -89,7 +89,23 @@
     <h2>Use Cases</h2>
     <p>Turning a screenshot into a clean square for an avatar, trimming banners and headers for social media, removing unwanted people or objects from the edges of a photo, correcting the orientation of a rotated photo, and creating a landscape image from a portrait frame.</p>
 
+    
+    <div class="upload-zone" id="upload-zone" style="margin-bottom:16px">
+      <span class="arrow">&#8963;</span>
+      <p style="margin:0">Drop an image here or click to browse</p>
+      <p class="sub">or paste one from your clipboard &bull; 50 MB max</p>
+      <input type="file" id="file-input" accept="image/*" multiple style="display:none">
+    </div>
+    <div id="preview-grid" style="display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px"></div>
+
     <div class="ad-slot" aria-label="Advertisement — inactive" aria-hidden="true"><!-- REPLACE ca-pub-XXXXXXXXXXXXXXXX --><!-- <iframe src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></iframe><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> --></div>
+
+    
+    <div id="cropper-box" style="display:none;margin:16px 0"></div>
+    <div id="cropper-tool-area" style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+      <button class="btn btn-sm btn-outline" id="clear-all" style="display:none">Clear All</button>
+      <button class="btn btn-sm btn-outline" id="download-cropped" style="display:none">Crop &amp; Download</button>
+    </div>
 
     <h2 style="margin-top:var(--space-2xl)">Frequently Asked Questions</h2>
     <div class="faq-list" style="max-width:860px;margin:0 auto">

@@ -53,25 +53,6 @@
   --duration: 160ms;
 }
 
-/* ---- Dark mode ---- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0f172a;
-    --color-surface: #1e293b;
-    --color-surface-2: #334155;
-    --color-text: #f1f5f9;
-    --color-text-muted: #94a3b8;
-    --color-primary-ink: #e2e8f0;
-    --color-accent: #3b82f6;
-    --color-accent-ink: #60a5fa;
-    --color-border: #334155;
-    --color-shadow: #000000;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
-  }
-}
-
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
