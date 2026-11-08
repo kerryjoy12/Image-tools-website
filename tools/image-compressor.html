@@ -30,7 +30,7 @@
   <div class="container">
     <a href="/" class="brand" aria-label="PixelTools home"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#pgrad)"/><rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/><circle cx="10" cy="10" r="2.4" fill="white"/><circle cx="22" cy="10" r="2.4" fill="white" opacity="0.7"/><circle cx="10" cy="22" r="2.4" fill="white" opacity="0.5"/><circle cx="22" cy="22" r="2.4" fill="white" opacity="0.3"/><defs><linearGradient id="pgrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs></svg><span>PixelTools</span></a>
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    
+
     <nav id="nav-links" class="nav-links" aria-label="Main">
       <ul aria-label="Primary">
         <li><a href="/">Home</a></li>
@@ -49,7 +49,6 @@
 
 <!-- ===== PAGE CODE -->
 <div id="main" class="container tool-layout">
-  <!-- Main content -->
   <div class="tool-main">
     <h1>Image Compressor</h1>
     <p class="tool-meta"><span class="badge" style="background:#059669;color:#fff;border-radius:var(--radius-sm);padding:var(--space-xs) var(--space-md);font-size:0.8rem;font-weight:700">100% Client-Side</span> Free, private image compression with a live before/after size preview. No files ever leave your device.</p>
@@ -87,7 +86,20 @@
       <div class="faq-item"><div class="faq-q"><p>Does the compressor support transparent PNGs?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Transparent PNGs are preserved exactly, including any alpha channel. The preview uses a checkerboard background so you can see that the transparency is intact.</p></div>
       <div class="faq-item"><div class="faq-q"><p>Can I compress images in bulk?</p><span class="icon">✓</span></div><p class="faq-a">Absolutely. Drag five screen captures in at once — each one is compressed separately and then downloaded as a ZIP archive containing all the results.</p></div>
       <div class="faq-item"><div class="faq-q"><p>Is it safe to use this on private photos?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Every byte is processed by your browser. No image is ever transmitted over the internet, stored on a server, or used for any purpose other than producing your output file.</p></div>
+        <div class="card" style="border:2px dashed var(--color-border);border-radius:var(--radius);padding:var(--space-xl);text-align:center;margin-bottom:var(--space-xl)">
+      <div class="arrow">⬇</div>
+      <p>Drop an image here or click to browse</p>
+      <p class="sub">Supports JPG, PNG, and WebP. Click the zone to choose files from your device.</p>
+      <input type="file" id="file-input" accept="image/*" multiple style="display:none">
     </div>
+    <div id="preview-grid" style="display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px"></div>
+    <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;align-items:center">
+      <button class="btn btn-primary" id="download-all" style="display:none">Download All (ZIP)</button>
+      <button class="btn btn-outline" id="clear-all" style="display:none">Clear All</button>
+    </div>
+    <p>The upload zone is the actual tool surface — no file is used until you press <strong>Compress</strong>.</p>
+
+</div>
   </div>
 
   <!-- Sidebar -->
@@ -128,155 +140,8 @@
 <button id="scroll-top" class="btn btn-outline btn-sm" aria-label="Scroll back to top" style="position:fixed;bottom:var(--space-lg);left:var(--space-lg);display:none;z-index:999"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>Top</button>
 <div id="toast-host" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-
-
-
-
-
-
-
-
-
-<script src="/assets/js/shared.js" defer></script><script src="/assets/js/cookies.js" defer></script><script src="/assets/js/tools/compressor.js" defer></script>
-</body>
-</html>E html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Compressor — Free Online Photo Shrinker | PixelTools</title>
-<meta name="description" content="Free online image compressor. Upload JPG, PNG, or WebP and shrink file size with a live quality slider. No uploads, 100% private, no signup.">
-<meta name="keywords" content="image compressor, photo shrinker, reduce file size, JPG compress, PNG compress, WebP compress">
-<link rel="canonical" href="https://kerryjoy12/image-tools-website/tools/image-compressor.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Image Compressor — Free Online Photo Shrinker">
-<meta property="og:description" content="Shrink JPG, PNG, and WebP files via a live quality slider. Runs 100% in your browser — no uploads.">
-<meta property="og:image" content="https://kerryjoy12/image-tools-website/assets/img/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Image Compressor — Free Online Photo Shrinker">
-<meta name="twitter:description" content="Shrink JPG, PNG, and WebP files via a live quality slider. Runs 100% in your browser — no uploads.">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="/manifest.json">
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" href="/assets/css/pixeltools.css">
-
-<noscript><link rel="stylesheet" href="/assets/css/pixeltools.css"></noscript>
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to main content</a>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header" role="banner">
-  <div class="container">
-    <a href="/" class="brand" aria-label="PixelTools home"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#pgrad)"/><rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/><circle cx="10" cy="10" r="2.4" fill="white"/><circle cx="22" cy="10" r="2.4" fill="white" opacity="0.7"/><circle cx="10" cy="22" r="2.4" fill="white" opacity="0.5"/><circle cx="22" cy="22" r="2.4" fill="white" opacity="0.3"/><defs><linearGradient id="pgrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs></svg><span>PixelTools</span></a>
-    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    
-    <nav id="nav-links" class="nav-links" aria-label="Main">
-      <ul aria-label="Primary">
-        <li><a href="/">Home</a></li>
-        <li><a href="/tools/image-compressor.html">Image Compressor</a></li>
-        <li><a href="/tools/image-resizer.html">Image Resizer</a></li>
-        <li><a href="/tools/jpg-to-png.html">JPG to PNG</a></li>
-        <li><a href="/tools/webp-converter.html">WebP Converter</a></li>
-        <li><a href="/tools/image-cropper.html">Image Cropper</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- ===== PAGE CODE -->
-<div id="main" class="container tool-layout">
-  <!-- Main content -->
-  <div class="tool-main">
-    <h1>Image Compressor</h1>
-    <p class="tool-meta"><span class="badge" style="background:#059669;color:#fff;border-radius:var(--radius-sm);padding:var(--space-xs) var(--space-md);font-size:0.8rem;font-weight:700">100% Client-Side</span> Free, private image compression with a live before/after size preview. No files ever leave your device.</p>
-
-    <p>PixelTools Image Compressor is a free, privacy-first online tool that shrinks image file sizes while keeping the quality look natural. Upload a JPG, PNG, or WebP, drag the <strong>quality slider</strong>, and watch two counters update live: the original file size, the new compressed size, and the percentage of space you save. When you are happy, hit <strong>Download</strong> and save the optimised file to your computer. Nothing is uploaded, stored, or shared.</p>
-
-    <p>Modern photography and screen capture routinely produce files of 5–20 MB. Those large files are hard to email, slow to upload, and expensive to host. A good image compressor reduces those sizes dramatically while keeping the image close to its original appearance. PixelTools calls this the <em>sweet spot of compression</em>: aggressive enough to save real space, gentle enough that no one can tell the difference.</p>
-
-    <h2>How to Compress an Image</h2>
-    <ol>
-      <li><strong>Upload a file.</strong> Drag &amp; drop a JPG, PNG, or WebP onto the upload zone, click to browse, or paste an image from your clipboard (Ctrl+V / Cmd+V). You can upload a single file or multiple files at once, in which case each one is compressed individually.</li>
-      <li><strong>Watch the live preview.</strong> The before-and-after previews refresh as you drag the quality slider. This gives you complete control over the trade-off between file size and visual quality.</li>
-      <li><strong>Choose a quality.</strong> Default is 82%. Professional photographers often use 80–85% for JPG. WebP and PNG compressors use lossless settings by default, which never degrade quality.</li>
-      <li><strong>Click Download.</strong> The optimised file is saved to your downloads folder. Multiple files download as a ZIP archive automatically.</li>
-      <li><strong>Clear and start over.</strong> Use <strong>Clear All</strong> or press Esc to remove processed images from the page.</li>
-    </ol>
-
-    <h2>Compression Tips</h2>
-    <ul>
-      <li><strong>For JPG:</strong> 80–85% quality gives an excellent size-to-quality ratio. Under 75% you will usually see visible artefacts around text and edges.</li>
-      <li><strong>For PNG:</strong> PNG is already lossless. Use the compressor to strip metadata, reduce colour depth, or convert to WebP instead if you need smaller files.</li>
-      <li><strong>For WebP:</strong> The WebP format usually beats JPG for photographs at the same visual quality. Convert JPG files to WebP to save an extra 25–35% on size.</li>
-      <li><strong>Batch process.</strong> Upload 50-screen-capture JPGs at once and download a ZIP — the whole batch is compressed in seconds on a fast machine.</li>
-    </ul>
-
-    <h2>Common Use Cases</h2>
-    <p>Screenshots for documentation, portfolio images that need to be delivered by email, social-media posts where you must stay under platform limits, and image archives that are slowly filling up your hard drive.</p>
-
-    <div class="ad-slot" aria-label="Advertisement — inactive" aria-hidden="true"><!-- REPLACE ca-pub-XXXXXXXXXXXXXXXX --><!-- <iframe src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></iframe><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> --></div>
-
-    <h2 style="margin-top:var(--space-2xl)">Frequently Asked Questions</h2>
-    <div class="faq-list" style="max-width:860px;margin:0 auto">
-      <div class="faq-item"><div class="faq-q"><p>Does the compressor reduce image quality?</p><span class="icon">✓</span></div><p class="faq-a">JPG compression is lossy by nature, so it can reduce quality. The slider lets you pick the quality yourself. We recommend 82% — most cameras and phones look indistinguishable at that setting, yet file sizes drop by 40–60%. PNG and WebP conversions are lossless and do not degrade quality.</p></div>
-      <div class="faq-item"><div class="faq-q"><p>What is the maximum file size I can upload?</p><span class="icon">✓</span></div><p class="faq-a">PixelTools limits uploads to 50 MB per file so the tool stays fast on every device. If your image is larger, shrink it first with the Resizer tool and then re-run it through the compressor.</p></div>
-      <div class="faq-item"><div class="faq-q"><p>Does the compressor support transparent PNGs?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Transparent PNGs are preserved exactly, including any alpha channel. The preview uses a checkerboard background so you can see that the transparency is intact.</p></div>
-      <div class="faq-item"><div class="faq-q"><p>Can I compress images in bulk?</p><span class="icon">✓</span></div><p class="faq-a">Absolutely. Drag five screen captures in at once — each one is compressed separately and then downloaded as a ZIP archive containing all the results.</p></div>
-      <div class="faq-item"><div class="faq-q"><p>Is it safe to use this on private photos?</p><span class="icon">✓</span></div><p class="faq-a">Yes. Every byte is processed by your browser. No image is ever transmitted over the internet, stored on a server, or used for any purpose other than producing your output file.</p></div>
-    </div>
-  </div>
-
-  <!-- Sidebar -->
-  <aside class="tool-sidebar" aria-label="Related information">
-    <div class="card">
-      <h3 style="font-size:1.1rem;margin:0 0 var(--space-sm)">Before You Compress</h3>
-      <ul style="margin:0;padding-left:var(--space-lg)">
-        <li><b>Original first:</b> Keep a copy of the original file before overwriting it with the compressed version.</li>
-        <li><b>Backup:</b> Store important images in at least two places before editing.</li>
-        <li><b>Metadata:</b> Compression can strip EXIF data (GPS, camera settings). Keep a backup if you need that information.</li>
-        <li><b>Check the result:</b> Always open the downloaded image at full size to verify quality before sharing it.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3 style="font-size:1.1rem;margin:0 0 var(--space-sm)">Need More?</h3>
-      <ul style="margin:0;padding-left:var(--space-lg)">
-        <li><a href="/tools/image-resizer.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">Image Resizer</a></li>
-        <li><a href="/tools/jpg-to-png.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">JPG to PNG</a></li>
-        <li><a href="/tools/webp-converter.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">WebP Converter</a></li>
-        <li><a href="/tools/image-cropper.html" style="display:block;padding:var(--space-sm) 0;color:#2563eb;text-decoration:none;font-weight:600">Image Cropper</a></li>
-      </ul>
-    </div>
-  </aside>
-</div>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col"><h4>PixelTools</h4><p style="margin:0;max-width:320px">Free, privacy-first online image tools that run entirely in your browser. Your photos belong to you.</p></div>
-      <div class="footer-col"><h4>Tools</h4><ul><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/image-resizer.html">Image Resizer</a></li><li><a href="/tools/jpg-to-png.html">JPG to PNG</a></li><li><a href="/tools/webp-converter.html">WebP Converter</a></li><li><a href="/tools/image-cropper.html">Image Cropper</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/blog/">Blog</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/cookie-policy.html">Cookie Policy</a></li><li><a href="/terms-of-service.html">Terms of Service</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; 2026 PixelTools. Made with <span>&hearts;</span> for a private web.</p><p>Image processing is done locally in your browser. No images are uploaded to our servers.</p></div>
-  </div>
-</footer>
-
-<button id="scroll-top" class="btn btn-outline btn-sm" aria-label="Scroll back to top" style="position:fixed;bottom:var(--space-lg);left:var(--space-lg);display:none;z-index:999"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>Top</button>
-<div id="toast-host" class="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-
-
-
-
-
-
-
-
-
+<script src="/assets/js/shared.js" defer></script>
+<script src="/assets/js/cookies.js" defer></script>
+<script src="/assets/js/tools/compressor.js" defer></script>
 </body>
 </html>
